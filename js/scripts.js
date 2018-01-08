@@ -49,7 +49,7 @@ var multiply = function(){
 }
 
 
-alert("Great, the result of those numbers is " + multiply(num1, num2) + ".");
+alert("Great, the product of those numbers is " + multiply(num1, num2) + ".");
 
 }
 
@@ -68,7 +68,7 @@ var divide = function(){
 }
 
 
-alert("Great, the result of those numbers is " + divide(num1, num2) + ".");
+alert("Great, the quotient of those numbers is " + divide(num1, num2) + ".");
 
 }
 
