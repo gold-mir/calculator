@@ -1,75 +1,30 @@
-//Addition
+var add = function(number1, number2) {
+  return number1 + number2;
+};
 
-var addCalc = function(){
+var subtract = function(number1, number2) {
+  return number1 - number2;
+};
 
-var num1 = parseInt(prompt("Enter a number"));
-var num2 = parseInt(prompt("Enter another number"))
+var multiply = function(number1, number2) {
+  return number1 * number2;
+};
 
-var add = function(){
+var divide = function(number1, number2) {
+  return number1 / number2;
+};
 
-	return(num1 + num2);
-}
+$(document).ready(function (){
+	$("#add").submit(function (event){
+		event.preventDefault();
 
-
-alert("Great, the sum of those numbers is " + add(num1, num2) + ".");
-
-}
-
-addCalc();
-
-//Subtraction
-
-var subCalc = function(){
-
-var num1 = parseInt(prompt("Enter a number"));
-var num2 = parseInt(prompt("Enter another number"))
-
-var subtract = function(){
-
-	return(num1 - num2);
-}
-
-
-alert("Great, the difference of those numbers is " + subtract(num1, num2) + ".");
-
-}
-
-subCalc();
-
-//Multiplication
-
-var multiCalc = function(){
-
-var num1 = parseInt(prompt("Enter a number"));
-var num2 = parseInt(prompt("Enter another number"))
-
-var multiply = function(){
-
-	return(num1 * num2);
-}
-
-
-alert("Great, the product of those numbers is " + multiply(num1, num2) + ".");
-
-}
-
-multiCalc();
-
-//Division
-
-var divCalc = function(){
-
-var num1 = parseInt(prompt("Enter a number"));
-var num2 = parseInt(prompt("Enter another number"))
-
-var divide = function(){
-
-	return(num1 / num2);
-}
-
-
-alert("Great, the quotient of those numbers is " + divide(num1, num2) + ".");
-
-}
-
-divCalc();
+		var number1 = parseFloat($("#add1").val());
+		var number2 = parseFloat($("#add2").val());
+		$("#add1").val("");
+		$("#add2").val("");
+		$("#output-bar .output").text(add(number1, number2));
+		$("#output-bar .num-in:first-child").text(number1);
+		$("#output-bar .num-in:nth-child(2)").text(number2);
+		$(".calc-output").show();
+	});
+});
